@@ -50,12 +50,3 @@ char *alt_strcat(char *dest, char *src)
     *dest++ = '\0';
     return (dest);
 }
-
-int main()
-{
-    char *str = " goed man!";
-    char dest[20] = "lekker";
-    ft_strcat(&dest[0], str);
-    printf("%s\n", dest);
-    return (0);
-}

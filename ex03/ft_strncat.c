@@ -9,10 +9,10 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 		dest++;
 	while (iterator != nb && src[iterator] != '\0')
 	{
-		*dest++ = *src++;
+		dest[iterator] = src[iterator];
 		iterator++;
 	}
-	*dest++ = '\0';
+	dest[iterator] = '\0';
 	return (dest);
 }
 
@@ -20,9 +20,9 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 int main()
 {
 	char dest[20];
-	char *src = "wat blij!";
+	char *src = "GWER#E$RGRED#$RT$FG$R@#$R#FERFWE$RRFWE";
 
-	ft_strncat(dest, src, 3);
+	ft_strncat(dest, src, 1);
 	printf("(dest: %s)\n", dest);
 }
 */

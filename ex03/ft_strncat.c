@@ -1,16 +1,28 @@
+// #include <stdio.h>
+
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	unsigned int	i;
+	unsigned int	iterator;
 
-	i = 0;
+	iterator = 0;
 	while (*dest)
 		dest++;
-	while (i != nb)
+	while (iterator != nb && src[iterator] != '\0')
 	{
-		if ((*dest++ = *src++) == 0)
-			break;
-		i++;
+		*dest++ = *src++;
+		iterator++;
 	}
 	*dest++ = '\0';
 	return (dest);
 }
+
+/*
+int main()
+{
+	char dest[20];
+	char *src = "wat blij!";
+
+	ft_strncat(dest, src, 3);
+	printf("(dest: %s)\n", dest);
+}
+*/

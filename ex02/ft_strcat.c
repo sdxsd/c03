@@ -1,3 +1,5 @@
+// #include <stdio.h>
+
 int	ft_strlen(char *str)
 {
 	int	iterator;
@@ -22,29 +24,19 @@ char	*ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-int	space_check(char *str)
-{
-	int	iterator;
-
-	iterator = 0;
-	while (str[iterator] < 32)
-	{
-		iterator++;
-	}
-	return (iterator);
-}
-
 char	*ft_strcat(char *dest, char *src)
 {
 	ft_strcpy(dest + ft_strlen(dest), src);
 	return (dest);
 }
 
-//char *alt_strcat(char *dest, char *src)
-//{
-//while (*dest)
-//dest++;
-//while ((*dest++ = *src++) != 0);
-//*dest++ = '\0';
-//return (dest);
-//}
+/*
+int main()
+{
+	char dest[20];
+	char *src = "wat blij!";
+
+	ft_strcat(dest, src);
+	printf("(dest: %s)\n", dest);
+}
+*/

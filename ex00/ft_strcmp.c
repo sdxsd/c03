@@ -6,7 +6,7 @@ int	ft_strcmp(char *s1, char *s2)
 	int	iterator;
 
 	iterator = 0;
-	while (s1[iterator] != '\0' && s2[iterator] != '\0')
+	while (s1[iterator] != '\0' || s2[iterator] != '\0')
 	{
 		if (s1[iterator] != s2[iterator])
 			return ((s1[iterator] - s2[iterator]));
@@ -18,7 +18,7 @@ int	ft_strcmp(char *s1, char *s2)
 /*
 int main()
 {
-	char *str1 = "goed_gecharred";
+	char *str1 = "";
 	char *str2 = "goed_gecharred";
 	char *str3 = "jefkjjjjdj";
 	printf("%d\n", ft_strcmp(str1, str2));

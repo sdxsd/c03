@@ -34,7 +34,7 @@ char	*ft_strcat(char *dest, char *src)
 int main()
 {
 	char dest[20];
-	char *src = "wat blij!";
+	char *src = "kjjkjkjkjkjkjk";
 
 	ft_strcat(dest, src);
 	printf("(dest: %s)\n", dest);

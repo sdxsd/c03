@@ -1,4 +1,5 @@
 //#include <stdio.h>
+//#include <string.h>
 
 int	ft_strlen(char *str)
 {
@@ -26,17 +27,16 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	ft_strncpy(dest + ft_strlen(dest), src, nb);
-	return (dest);
+	return (ft_strncpy(dest + ft_strlen(dest), src, nb));
 }
 
 /*
 int main()
 {
 	char dest[20];
-	char *src = "GWER#E$RGRED#$RT$FG$R@#$R#FERFWE$RRFWE";
+	char *src = "123456789abcdefghijklmnop";
 
-	ft_strncat(dest, src, 4);
+	ft_strncat(dest, src, 19);
 	printf("(dest: %s)\n", dest);
 }
 */

@@ -1,5 +1,5 @@
-//#include <stdio.h>
-//#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
 int	ft_strlen(char *str)
 {
@@ -34,9 +34,11 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 int main()
 {
 	char dest[20];
-	char *src = "123456789abcdefghijklmnop";
+	char *src = "#%$#$#SC#%VDD#T$Tkhhjdkjfkljdklfdjk";
 
-	ft_strncat(dest, src, 19);
+	//ft_strncat(dest, src, 20);
+	printf("(dest: %s)\n", dest);
+	ft_strncat(dest, src, 20);
 	printf("(dest: %s)\n", dest);
 }
 */

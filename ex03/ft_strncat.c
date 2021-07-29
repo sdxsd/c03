@@ -1,42 +1,31 @@
 // #include <stdio.h>
 // #include <string.h>
 
-int	ft_strlen(char *str)
-{
-	int	iterator;
-
-	iterator = 0;
-	while (str[iterator] != '\0')
-		iterator++;
-	return (iterator);
-}
-
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (src[i] != '\0' && i < n)
-	{
-		dest[i] = src[i];
-		++i;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	return (ft_strncpy(dest + ft_strlen(dest), src, nb));
-}
+	int				iterator;
+	unsigned int	iterator2;
 
+	iterator = 0;
+	iterator2 = 0;
+	while (dest[iterator] != '\0')
+		iterator++;
+	while (iterator2 < nb && src[iterator2] != '\0')
+	{
+		dest[iterator] = src[iterator2];
+		iterator++;
+		iterator2++;
+	}
+	dest[iterator] = '\0';
+	return (dest);
+}
 /*
 int main()
 {
-	char dest[20];
-	char *src = "#%$#$#SC#%VDD#T$Tkhhjdkjfkljdklfdjk";
+	char dest[20] = "kdjkfdj";
+	char *src = "#%$#$";
 
-	//ft_strncat(dest, src, 20);
+	//ft_strncat(dest, src, 5);
 	printf("(dest: %s)\n", dest);
 	ft_strncat(dest, src, 20);
 	printf("(dest: %s)\n", dest);

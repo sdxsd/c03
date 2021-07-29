@@ -19,6 +19,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	dest[iterator] = '\0';
 	return (dest);
 }
+
 /*
 int main()
 {
